@@ -407,6 +407,16 @@ textarea {
   background: url("../image/index/back_banner.png") repeat-x;
   background-size: contain;
 }
+.banner .swiper-container-horizontal > .swiper-pagination-bullets,
+.banner .swiper-pagination-custom,
+.banner .swiper-pagination-fraction {
+  max-width: 480px;
+  left: auto;
+  right: 50px;
+}
+.banner .swiper-pagination .swiper-pagination-bullet-active {
+  background: #ffffff;
+}
 .banner .banner-cen {
   width: 100%;
   height: auto;
@@ -470,10 +480,34 @@ textarea {
   line-height: 40px;
   background: rgba(26, 79, 134, 0.9);
   text-align: center;
-}
-.banner .swiper-container .bot_txt p {
   color: #ffffff;
   font-size: 24px;
+  padding: 40px 50px;
+}
+.banner .swiper-container .bot_txt .more-img {
+  position: absolute;
+  width: 100px;
+  height: 20px;
+  right: 50px;
+  bottom: 40px;
+}
+.banner .swiper-container .bot_txt .more-img img {
+  width: 100%;
+}
+.banner .swiper-container .bot_txt p:first-child {
+  text-align: left;
+}
+.banner .swiper-container .bot_txt .txt-detail {
+  max-width: 335px;
+  width: 100%;
+  text-align: left;
+  line-height: 1;
+  margin-top: 40px;
+}
+.banner .swiper-container .bot_txt .txt-detail p {
+  font-size: 14px;
+  color: #ffffff;
+  margin-bottom: 10px;
 }
 .banner .swiper-container .bot_txt img {
   width: 100px;
