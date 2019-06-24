@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走进华强-重要客户</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <div class="content">
+        <nav></nav>
+        <div class="bg-all"></div>
+        <!--    新闻-走进华强-->
+        <div class="news clx cen13">
+            <div class="news-nav">
+                <p>走进华强</p>
+                <ul>
+                    <li>公司简介</li>
+                    <li>企业文化</li>
+                    <li>发展规划</li>
+                    <li>公司理念</li>
+                    <li>服务范围</li>
+                    <li class="sel">重要客户</li>
+                    <li>专业团队</li>
+                </ul>
+            </div>
+            <div class="news-content">
+                <div class="top  clx">
+                    <div class="title">
+                        企业文化
+                    </div>
+                    <div class="location">
+                        <img src="image/index/icon-location.png" alt="">
+                        <span>当前位置：走进华强 / 企业文化</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="customer clx">
+
+                        <p class="fl sel" data-bg="./image/logos1.png">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+
+                    </div>
+                </div>
+                <div class="page-out">
+                    <div class="page">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p class="act">4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>…</p>
+                        <p>16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $(".customer p").click(function () {
+        var _this=$(this);
+        $(".customer p").removeClass("sel");
+       $(".customer p").css('background-image',"");
+        $(this).toggleClass("sel");
+        if((typeof _this.attr("data-bg"))!=="undefined"){
+            console.log('有背景')
+            var url=_this.attr('data-bg');
+            console.log('url',url);
+            _this.css('background-image',"url('" + url + "')");
+        }
+    //.css('background','url(res/skin/dist/img/zongheguanli_bg.png)8px  no-repeat');
+
+    });
+</script>

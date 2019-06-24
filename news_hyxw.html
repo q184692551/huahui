@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>华强新闻-行业新闻</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+<body>
+<div class="container plan">
+    <header></header>
+    <div class="content">
+        <nav></nav>
+        <div class="bg-all"></div>
+        <!--    新闻-走进华强-->
+        <div class="news clx cen13">
+            <div class="news-nav">
+                <p>华强新闻</p>
+                <ul>
+                    <li>公司动态</li>
+                    <li class="sel">行业新闻</li>
+                    <li>论文刊登</li>
+                    <li>论文刊登</li>
+                    <li>论文刊登</li>
+                </ul>
+            </div>
+            <div class="news-content">
+                <div class="top  clx">
+                    <div class="title">
+                        行业新闻
+                    </div>
+                    <div class="location">
+                        <img src="image/index/icon-location.png" alt="">
+                        <span>当前位置：走进华强 / 行业新闻</span>
+                    </div>
+                </div>
+                <div class="detail clx">
+
+                    <div class="txt-newsList">
+                        <a href="#">
+                            <p class="title">成都总公司开展三八妇女节庆祝活动</p>
+                            <p class="date">2019</p>
+                            <div class="txt clx">
+                                <p class="fl">
+                                    为了更好丰富公司企业文化生活，加强员工凝聚力，表达公司对妇女同仁的关怀和问候，公司总经理办公室、工会、共青团共同组织在三圣乡开
+                                </p>
+                                <p class="day fr">
+                                    03-08
+                                </p>
+                            </div>
+                        </a>
+                        <a href="#">
+                            <p class="title">成都总公司开展三八妇女节庆祝活动</p>
+                            <p class="date">2019</p>
+                            <div class="txt clx">
+                                <p class="fl">
+                                    为了更好丰富公司企业文化生活，加强员工凝聚力，表达公司对妇女同仁的关怀和问候，公司总经理办公室、工会、共青团共同组织在三圣乡开
+                                </p>
+                                <p class="day fr">
+                                    03-08
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+                <div class="page-out">
+                    <div class="page">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p class="act">4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>…</p>
+                        <p>16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+</body>
+</html>
+<script>
+    /*首页轮播*/
+    var swiper = new Swiper('.swiper-container', {
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+    /*为所有data-bg属性元素添加背景*/
+    var list = document.querySelectorAll("div[data-bg]");
+    for (var i = 0; i < list.length; i++) {
+        var url = list[i].getAttribute('data-bg');
+        list[i].style.backgroundImage = "url('" + url + "')";
+    }
+    /*顶部菜单*/
+    var wap_nav=false;
+    function togglenav() {
+        console.log('togglenav')
+        wap_nav=!wap_nav;
+        if(wap_nav){
+            console.log('wap_nav',wap_nav);
+            document.querySelectorAll(".menu-nav")[0].style.display="block";
+            document.querySelectorAll(".content .nav")[0].style.display="none";
+
+        }
+        else {
+            document.querySelectorAll(".menu-nav")[0].style.display="none";
+        }
+    }
+    var stars = document.querySelectorAll(".menu-nav ul li");
+    for (var i=0;i<stars.length;i++){
+        stars[i].index = i;
+    }
+
+    for (var i=0;i<stars.length;i++) {
+
+        stars[i].onclick = function(){
+            console.log(this.main);
+//            document.querySelectorAll(".menu-nav ul li").className ='act';
+            console.log('stars[i]',stars[this.main]);
+//            document.querySelectorAll(".menu-nav ul ").childNodes.className='';
+            for (var j=0;j<stars.length;j++) {
+                stars[j].className ='';
+            }
+            stars[this.main].className ='act';
+        }
+    }
+    /*菜单end*/
+</script>
