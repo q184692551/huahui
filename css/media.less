@@ -75,10 +75,15 @@
     width: 24%;
   }
 
-
+  .container .news .news-nav .sel, .plan .news .news-nav .sel{
+    background: #1a4f86;
+    color: #ffffff;
+    text-align: center;
+  }
 
 
   .container .news .news-nav .sel:after, .plan .news .news-nav .sel:after {
+    display: none;
     right: calc(25% - 15px);
     top: 14px;
     left: 10px;
@@ -219,6 +224,34 @@
 }
 
 @media screen and (max-width: 1150px) {
+  .container .news .news-content .detail .prize, .plan .news .news-content .detail .prize{
+    text-align: center;
+  }
+  .container .news .news-content .detail .prize ul > li .img, .plan .news .news-content .detail .prize ul > li .img{
+    img{
+      width: 100%;
+    }
+  }
+  .container .news .news-content .detail .prize ul > li, .plan .news .news-content .detail .prize ul > li
+  {
+    float: none;
+    display: inline-block;
+  }
+  .container .news .news-content .detail .prize ul > li, .plan .news .news-content .detail .prize {
+    ul{
+      max-width: 720px;
+      margin: 0 auto;
+      border: 1px solid red;
+      li{
+        float: none;
+        display: inline-block;
+      }
+    }
+
+  }
+  .container .news .news-content .detail .prize ul > li:nth-child(3n), .plan .news .news-content .detail .prize ul > li:nth-child(3n){
+    margin-right: 30px;
+  }
 
   .bockCen {
 
@@ -321,6 +354,32 @@
 }
 
 @media screen and (max-width: 1130px) {
+  .container .news .news-content .detail .image-text .text, .plan .news .news-content .detail .image-text{
+    text-align: center;
+  }
+  .container .news .news-content .detail .image-text .text, .plan .news .news-content .detail .image-text .text{
+    float: none;
+    display: inline-block;
+  }
+  .container .news .news-content .detail .image-text .img, .plan .news .news-content .detail .image-text .img{
+    float: none;
+    display: inline-block;
+  }
+  .group-us {
+    margin-bottom: 50px;
+    text-align: center;
+    .group-col {
+      height: auto;
+      .img{
+        float: none;
+        display: inline-block;
+      }
+      .txt{
+        display: inline-block;
+        float: none;
+      }
+    }
+  }
   .bockCen .index-news .imgList {
     text-align: center;
 
@@ -341,6 +400,17 @@
 }
 
 @media screen and (max-width: 1050px) {
+  .container .news .news-content .detail .culture .img, .plan .news .news-content .detail .culture{
+    text-align: center;
+  }
+  .container .news .news-content .detail .culture .img, .plan .news .news-content .detail .culture .img{
+    float: none;
+    margin: 0 auto;
+  }
+  .container .news .news-content .detail .culture .txt, .plan .news .news-content .detail .culture .txt{
+    float: none;
+    margin: 0 auto;
+  }
   .container .news .news-content .detail .act-view, .plan .news .news-content .detail {
     text-align: center;
 
@@ -478,12 +548,37 @@
 }
 
 @media screen and (max-width: 900px) {
-  .bockCen .service-cen .service-step {
-    width:calc( (100% - 100px));
-    .step{
-      width:calc( (100% - 100px) / 2);
+  .bockCen .service-cen
+  {
+    .index-service {
+      width: 200px;
+      height: 80px;
+      float: none;
+      display: inline-block;
+      margin: 0 auto 15px auto;
+      .flex;
+      .just_center;
+      img{
+        margin-top: 25px;
+        vertical-align: middle;
+        margin-left: 20px;
+      }
+      .rl{
+        margin: 20px 0 0 20px;
+        writing-mode:horizontal-tb;
+        line-height: 20px;
+      }
+
+    }
+    .service-step {
+      .step{
+        width:calc( (100% - 100px) / 2);
+        float: none;
+        display: inline-block;
+      }
     }
   }
+
   .bockCen .service-step .step_last {
     text-align: left;
     margin: 0 auto;
@@ -625,37 +720,44 @@
 
 @media screen and (max-width: 650px) {
   //.bockCen .service-cen .index-service .rl
+.banner .swiper-container .bot_txt{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #ffffff;
+  height: 30px;
+  line-height: 30px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+  overflow: hidden;
+  .ellipse;
+}
+  .swiper-pagination{
+    display: none;
+  }
+  .bockCen .index-member ul > li{
+    float: none;
+    margin: 0 auto;
+    &:last-child{
+      margin-right: auto;
+    }
+
+  }
   .bockCen {
     .service-cen{
-      .index-service {
-        width: 200px;
-        height: 80px;
-        float: none;
-        display: inline-block;
-        margin: 0 auto 15px auto;
-        .flex;
-        .just_center;
-        img{
-          margin-top: 25px;
-          vertical-align: middle;
-          margin-left: 20px;
-        }
-        .rl{
-          margin: 20px 0 0 20px;
-          writing-mode:horizontal-tb;
-          line-height: 20px;
-        }
-
-      }
+      text-align: center;
       .service-step{
         float: none;
-        min-width: 440px;
         margin: 0 auto;
+        text-align: center;
         .step{
-          min-width: 215px;
+          width: 100%;
+          height: 100px;
+          display: inline-block;
+          float: none;
           &:nth-child(2n){
             margin-right: 0;
-
           }
         }
       }
@@ -663,7 +765,26 @@
 
 
   }
+  .container .news .news-content .detail .txt-newsList a .date, .plan .news .news-content .detail .txt-newsList a .date
+  {
+    float: none;
+    display: inline-block;
+    width: 100%;
+  }
+  .container .news .news-content .detail .txt-newsList a, .plan .news .news-content .detail .txt-newsList a{
+    height: auto;
+  }
 
+  .container .news .news-content .detail .txt-newsList a .txt, .plan .news .news-content .detail .txt-newsList a .txt
+  {
+    float: none;
+    display: inline-block;
+    height: auto;
+    width: 100%;
+  }
+  .container .news .news-content .detail .txt-newsList a .date{
+    width: 100%;
+  }
 
   .container .news .news-content .detail .act-view, .plan .news .news-content .detail .act-view{
     margin-bottom: 10px;
@@ -895,7 +1016,41 @@
 }
 
 @media screen and (max-width: 530px) {
+  .container .news .news-content .detail .culture .txt .txt-col, .plan .news .news-content .detail .culture .txt .txt-col
+  {
+    height: auto;
+    text-align: center;
+    .fl,.fr{
+      float: none;
+    }
+  }
+  .container .news .news-content .detail .culture .txt .txt-col ul, .plan .news .news-content .detail .culture .txt .txt-col ul{
 
+    align-items: center;
+  }
+  .container .news .news-content .detail .culture .txt .txt-col ul li:first-child, .plan .news .news-content .detail .culture .txt .txt-col ul li:first-child
+  {
+    float: none;
+    margin: 0;
+    align-items: center;
+    font-size: 14px;
+    min-width: 110px;
+    padding-left: 10px;
+    width: 100%;
+    display: inline-block;
+    height: auto;
+  }
+  .container .news .news-content .detail .culture .txt .txt-col ul li:nth-child(2), .plan .news .news-content .detail .culture .txt .txt-col ul li:nth-child(2){
+    float: none;
+    margin: 0;
+    width: 100%;
+    display: inline-block;
+    font-size: 12px;
+    p{
+     text-align: center;
+      font-size: 12px;
+    }
+  }
   .bockCen .index-company {
     text-align: center;
 
@@ -973,9 +1128,51 @@
     height: auto;
   }
 
+  .container .news .news-content .detail .jobs .job-col .job-name, .plan .news .news-content .detail .jobs .job-col .job-name
+  {
+    text-align: left;
+    height: auto;
+    position: relative;
+    font-size: 12px;
+    width: 100%;
+    padding: 0;
+    .fl{
+      float: none;
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      text-align: left;
+    }
+    .fr{
+      float: none;
+      display: inline-block;
+      max-width: 100%;
+      width: 100%;
+      text-align: left;
+    }
+    .email{
+      display: none;
+    }
+  }
+  .container .news .news-content .detail .jobs .job-col .des .txt, .plan .news .news-content .detail .jobs .job-col .des .txt{
+    margin-top: 0;
+  }
+  .container .news .news-content .detail .jobs .job-col .skill .txt, .plan .news .news-content .detail .jobs .job-col .skill .txt{
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 420px) {
+  .container .news .news-content .detail .image-text .img, .plan .news .news-content .detail .image-text .img{
+ max-height: 150px;
+  }
+  .container .news .news-content .detail .image-text .text .title, .plan .news .news-content .detail .image-text .text .title{
+    font-size: 18px;
+  }
+  .container .news .news-content .detail .image-text .text .content, .plan .news .news-content .detail .image-text .text .content{
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
   .bockCen .index-news .nes-list ul li p:first-child{
     max-width: 200px;
   }
@@ -1034,7 +1231,6 @@
 
   .bockCen .service-step .step {
     height: 80px;
-    line-height: 80px;
     font-size: 16px;
 
     img {
@@ -1350,12 +1546,12 @@
         //}
         .title {
           font-size: 16px;
-          padding: 20px 0 15px 0
+          padding: 0
         }
 
         .txt {
           text-align: left;
-          margin-top: 30px;
+          margin-top: 10px;
           .day {
             font-size: 16px;
             display: inline-block;
@@ -1374,9 +1570,9 @@
           top: -25px;
           text-align: left;
           font-weight: 700;
-          border-bottom: 2px solid #dedede;
+
           margin-bottom: 10px;
-          width: 3em;
+          width: 100%;
 
 
 
@@ -1385,7 +1581,35 @@
     }
 
   }
+  .container .news .news-content .detail .txt-newsList a .txt .title, .plan .news .news-content .detail .txt-newsList a .txt .title{
+    font-size: 14px;
+  }
+  .container .news .news-content .detail .txt-newsList a .date p:last-child, .plan .news .news-content .detail .txt-newsList a .date p:last-child
+  {
+    font-size: 16px;
+  }
+  .container .news .news-content .detail .txt-newsList a .date p:first-child, .plan .news .news-content .detail .txt-newsList a .date p:first-child{
+    font-size: 14px;
+  }
+  .container .news .news-content .detail .txt-newsList a:hover{
+    background: #ffffff;
+    .date {
+      background: #ffffff;
+      color: #cccccc;
+    }
 
+    .title {
+      color: #333333;
+      width: 100%;
+      text-align: left;
+    }
+
+    .day {
+      font-size: 24px;
+      color: #999999;
+    }
+
+  }
 }
 
 @media screen and (max-width: 480px) {
