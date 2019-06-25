@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>走进华惠-组织架构</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <script src="js/swiper.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script src="js/main.js"></script>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+<div class="container">
+    <header></header>
+    <div class="content">
+        <nav></nav>
+        <div class="bg-all"></div>
+        <!--    新闻-走进华惠-->
+        <div class="news clx cen13">
+            <div class="news-nav">
+                <p>走进华惠</p>
+                <p>about us</p>
+                <ul>
+                    <li>公司简介</li>
+                    <li>企业文化</li>
+                    <li>公司理念</li>
+                    <li class="sel">组织架构</li>
+                </ul>
+            </div>
+            <div class="news-content" style="max-width: 1080px;width: 100%">
+                <div class="top  clx">
+                    <div class="title">
+                        组织架构
+                    </div>
+                    <div class="location">
+                        <img src="image/index/icon-location.png" alt="">
+                        <span>当前位置：走进华惠 / 组织架构</span>
+                    </div>
+                </div>
+                <div class="detail">
+                    <div class="txt-area">
+                        <img src="image/g.png" alt="">
+                    </div>
+                </div>
+                <div class="page-out">
+                    <div class="page">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p class="act">4</p>
+                        <p>5</p>
+                        <p>6</p>
+                        <p>…</p>
+                        <p>16</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</div>
+</body>
+</html>
+<script type="text/javascript">
+
+    $(".customer p").hover(function () {
+        var _this=$(this);
+        $(".customer p").removeClass("sel");
+
+       $(".customer p").css('background-image',"");
+        $(this).toggleClass("sel");
+        if((typeof _this.attr("data-bg"))!=="undefined"){
+            var url=_this.attr('data-bg');
+            _this.css('background-color',"none");
+            _this.css('background-image',"url('" + url + "')");
+        }
+    //.css('background','url(res/skin/dist/img/zongheguanli_bg.png)8px  no-repeat');
+
+    });
+</script>

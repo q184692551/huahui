@@ -33,45 +33,19 @@
     }
   }
 
-  .bockCen {
+  .bockCen .service-cen {
     .index-service {
-      position: absolute;
-    }
+      margin-top: 50px;
+      .rl{
 
-    .service-step {
-      margin-left: 0;
-      margin: 0 auto;
-      text-align: center;
-      background: none;
-      float: none;
-      .step {
-        float: none;
-        width: 300px;
-        display: inline-block;
-        background: #bd2823;
-      }
-
-      .step_last {
-        float: none;
-        max-width:100%;
-        margin: 0 auto;
-        .clx;
-
-        .step-col {
-          float: left;
-        }
       }
     }
-
-    .service-cen {
-      max-width: 880px;
-      width: 100%;
-      height: auto;
-      position: relative;
-      margin: 0 auto;
-      text-align: center;
+    .service-step{
+      max-width: 800px;
     }
+    padding: 0 calc((100% - 900px) / 2);
   }
+
 
 
   .container .news .news-nav, .plan .news .news-nav {
@@ -224,6 +198,10 @@
 
 }
 
+
+@media screen and (max-width: 1200px){
+
+}
 @media screen and (max-width: calc(143px * 7)) {
 
   .bockCen {
@@ -500,7 +478,12 @@
 }
 
 @media screen and (max-width: 900px) {
-
+  .bockCen .service-cen .service-step {
+    width:calc( (100% - 100px));
+    .step{
+      width:calc( (100% - 100px) / 2);
+    }
+  }
   .bockCen .service-step .step_last {
     text-align: left;
     margin: 0 auto;
@@ -641,6 +624,47 @@
 }
 
 @media screen and (max-width: 650px) {
+  //.bockCen .service-cen .index-service .rl
+  .bockCen {
+    .service-cen{
+      .index-service {
+        width: 200px;
+        height: 80px;
+        float: none;
+        display: inline-block;
+        margin: 0 auto 15px auto;
+        .flex;
+        .just_center;
+        img{
+          margin-top: 25px;
+          vertical-align: middle;
+          margin-left: 20px;
+        }
+        .rl{
+          margin: 20px 0 0 20px;
+          writing-mode:horizontal-tb;
+          line-height: 20px;
+        }
+
+      }
+      .service-step{
+        float: none;
+        min-width: 440px;
+        margin: 0 auto;
+        .step{
+          min-width: 215px;
+          &:nth-child(2n){
+            margin-right: 0;
+
+          }
+        }
+      }
+    }
+
+
+  }
+
+
   .container .news .news-content .detail .act-view, .plan .news .news-content .detail .act-view{
     margin-bottom: 10px;
   }
@@ -784,28 +808,47 @@
     }
   }
 
-  .footer .cen-left {
-    .navs {
-      max-width: 100%;
-      width: 100%;
-      display: inline-block;
-      text-align: left;
+  .footer
+  {
+    .line-footer{
+      display: none;
+    }
+    .mid  {
 
-      ul > li {
-        display: inline-block;
-        width: 80px;
-        margin-right: calc((100% - 80px * 4 - 20px) / 3);
+      .navs {
+        display: none;
 
-        &:nth-child(4n) {
-          margin-right: 0;
+      }
+      .address{
+        margin-top: 0;
+        width: 100%;
+        .con {
+          .flex;
+          .con_l{
+            font-size: 12px;
+            width: 50px;
+            float: none;
+          }
+          .con_txt{
+            float: none;
+            .flex_1;
+            text-align: left;
+          }
         }
-
-        &:last-child {
-          margin-right: 0;
+        .flex;
+        .txt {
+          .flex_1;
+          p{
+            font-size: 12px;
+            text-align: left;
+          }
         }
       }
+
     }
+
   }
+
 
   .container .news .news-content .detail .jobs .job-col, .plan .news .news-content .detail .jobs .job-col {
     text-align: center;
@@ -953,14 +996,14 @@
       margin-top: 30px;
       .date {
         margin-right: 0;
+        position: absolute;
         -webkit-transform: scale(0.5);
         -moz-transform: scale(0.5);
         -ms-transform: scale(0.5);
         -o-transform: scale(0.5);
         transform: scale(0.5);
-        position: absolute;
-        left: -15px;
-        top: -18px;
+        top:-10px;
+        left: 1px;
       }
 
       .txt {
@@ -1212,6 +1255,7 @@
     }
 
     .Copyright {
+      font-size: 12px;
       .fr {
         p {
           display: block;
@@ -1221,7 +1265,7 @@
       margin: 0px;
       text-align: left;
       line-height: 1.5;
-      padding-bottom: 10px;
+      padding: 10px;
 
       .logo-bot {
         font-size: 12px;
@@ -1356,19 +1400,6 @@
     }
   }
 
-  .bockCen .index-service {
-    display: none;
-  }
-
-  .bockCen .service-step {
-    background: #bd2823;
-    max-width: 300px;
-    width: 100%;
-    .step_last .step-col {
-      float: none;
-      width: calc((100% - 20px) / 2);
-    }
-  }
 
 }
 

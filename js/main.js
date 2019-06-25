@@ -49,13 +49,13 @@ window.onload =function () {
 
 
     /*加载公共部分*/
-    $.get("component/head.html",function(data){
+    $.get("./component/head.html",function(data){
         $("header").html(data);
     });
-    $.get("component/footer.html",function(data){
+    $.get("./component/footer.html",function(data){
         $("footer").html(data);
     });
-    $.get("component/nav.html",function(data){
+    $.get("./component/nav.html",function(data){
         $("nav").html(data);
     });
     if($(".nav ul li")){
@@ -64,6 +64,7 @@ window.onload =function () {
 
 }
 
+/*url中参数*/
 function GetQueryString(name)
 {
     var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");

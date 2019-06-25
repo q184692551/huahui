@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>走进华强-重要客户</title>
+    <title>走进华惠-重要客户</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/swiper.min.css">
@@ -17,10 +17,11 @@
     <div class="content">
         <nav></nav>
         <div class="bg-all"></div>
-        <!--    新闻-走进华强-->
+        <!--    新闻-走进华惠-->
         <div class="news clx cen13">
             <div class="news-nav">
-                <p>走进华强</p>
+                <p>走进华惠</p>
+                <p>our customers</p>
                 <ul>
                     <li>公司简介</li>
                     <li>企业文化</li>
@@ -38,13 +39,42 @@
                     </div>
                     <div class="location">
                         <img src="image/index/icon-location.png" alt="">
-                        <span>当前位置：走进华强 / 企业文化</span>
+                        <span>当前位置：走进华惠 / 企业文化</span>
                     </div>
                 </div>
                 <div class="detail">
                     <div class="customer clx">
 
-                        <p class="fl sel" data-bg="./image/logos1.png">
+                        <p class="fl sel" data-bg="./src/link-1.png">
+                            <a href="#">
+                                <span>中铁二局集团勘测设计院有限责任公司</span>
+                            </a>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
+                            <span>中铁二局集团勘测设计院有限责任公司</span>
+                        </p>
+                        <p class="fl">
                             <span>中铁二局集团勘测设计院有限责任公司</span>
                         </p>
                         <p class="fl">
@@ -86,15 +116,15 @@
 </html>
 <script type="text/javascript">
 
-    $(".customer p").click(function () {
+    $(".customer p").hover(function () {
         var _this=$(this);
         $(".customer p").removeClass("sel");
+
        $(".customer p").css('background-image',"");
         $(this).toggleClass("sel");
         if((typeof _this.attr("data-bg"))!=="undefined"){
-            console.log('有背景')
             var url=_this.attr('data-bg');
-            console.log('url',url);
+            _this.css('background-color',"none");
             _this.css('background-image',"url('" + url + "')");
         }
     //.css('background','url(res/skin/dist/img/zongheguanli_bg.png)8px  no-repeat');
